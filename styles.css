@@ -67,6 +67,9 @@ li a {
   line-height: normal;
   transition: 200ms;
 }
+.nav-link:hover {
+  color: #6d488b;
+}
 form {
   position: relative;
   display: flex;
@@ -79,7 +82,7 @@ form {
 .search {
   width: 200px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 16px;
   background: #262629;
   border: none;
   outline: none;
@@ -88,14 +91,20 @@ form {
 }
 .search-icon {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-.bag-icon {
-  margin-left: 55px;
+.search-icon:hover path {
+  stroke: #6d488b;
+}
+.nav-icon {
+  margin-left: 16px;
   cursor: pointer;
+}
+.nav-icon:hover path {
+  stroke: #6d488b;
 }
 /* END NAVIGATION */
 
@@ -284,6 +293,9 @@ svg {
 }
 .legal-container a {
   margin: 0 5px;
+}
+.legal-link:hover {
+  color: #6d488b;
 }
 .footer a {
   text-decoration: none;

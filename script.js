@@ -15,5 +15,4 @@
   navButton.addEventListener('click', toggleNav);
   card.addEventListener('mouseover', playVideo);
   card.addEventListener('mouseout', pauseVideo);
-
 })();
