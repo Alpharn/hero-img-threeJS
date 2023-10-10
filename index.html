@@ -16,9 +16,19 @@
           <div id="nav-container">
             <a href="#"><img class="logo" src="assets/logo.svg" alt="Company Logo" width="92" height="92"></a> 
             <div id="nav-menu-button" role="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M4 16H28M4 8H28M4 24H28" stroke="#DDDDDD" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <svg class="burger-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#DDD" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                  <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                  <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+                </path>
+                <rect width="10" height="10" stroke="none">
+                  <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                </rect>
+                <rect width="10" height="10" stroke="none">
+                  <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                  <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                </rect>
+              </svg>
             </div>
             <nav>
               <ul class="nav-ul hide-ul">
