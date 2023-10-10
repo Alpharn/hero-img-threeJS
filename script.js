@@ -10,7 +10,7 @@
   const toggleNav = () => {
       navUl.classList.toggle("hide-ul");
       navButton.classList.toggle("active");
-      // Проверяем состояние меню и запускаем соответствующую анимацию
+
       if (navUl.classList.contains('hide-ul')) {
           reverseAnimation.beginElement();
       } else {

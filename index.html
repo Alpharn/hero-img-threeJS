@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset=UTF-8 />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,8 +11,9 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div id="threejs-container"></div>
     <div class="main-bg">
-      <div id="nav-background">
+      <!-- <div id="nav-background"> -->
         <header id="nav-header">
           <div id="nav-container">
             <a href="#"><img class="logo" src="assets/logo.svg" alt="Company Logo" width="92" height="92"></a> 
@@ -56,7 +58,7 @@
               </svg>
           </div>
         </header>
-      </div>
+      <!-- </div> -->
       <main>
         <section class="banner">
           <h1>Premium curated design resources to <br> speed up your creative workflow</h1>
@@ -141,7 +143,7 @@
 
       renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
+      document.getElementById('threejs-container').appendChild(renderer.domElement);
 
       starGeo = new THREE.Geometry();
       for(let i=0;i<6000;i++) {

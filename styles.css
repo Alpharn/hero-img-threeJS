@@ -12,17 +12,20 @@
 ul {
   list-style: none;
 }
+body {
+  background: #202126;
+}
 /* BACKGROUND */
 .main-bg {
-  position: absolute;
   width: 100%;
   /* background: url('assets/main-bg.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   min-height: auto;
   z-index: -2;
+  background: rgba(37, 38, 46, 0.80);
 }
-.main-bg::before {
+/* .main-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -31,7 +34,7 @@ ul {
   right: 0;
   background: rgba(37, 38, 46, 0.80);
   z-index: -1;
-}
+} */
 /*END BACKGROUND */
 
 /* NAVIGATION */
@@ -48,7 +51,6 @@ ul {
 }
 .nav-ul {
   display: flex;
-  /* max-width: 700px; */
 }
 .nav-ul>li {
   display: flex;
@@ -124,7 +126,7 @@ form {
 
 /* BANNER */
 .banner h1 {
-  margin-top: 190px;
+  margin-top: 90px;
   padding-bottom: 40px;
   color: #FFF;
   text-align: center;
@@ -145,6 +147,7 @@ form {
   padding-bottom: 40px;
 }
 /* END BANNER SECTION*/
+
 /* CARD SECTION */
 .filters {
   display: flex;
@@ -188,12 +191,12 @@ form {
 .card-image {
   width: 466px;
   height: 343px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .card-video {
   width: 466px;
   height: 343px;
-  border-radius: 15px;
+  border-radius: 8px;
   object-fit: cover;
 }
 .btn-demo {
@@ -228,7 +231,7 @@ form {
   bottom: 0;
   width: 466px;
   height: 103px;
-  border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 8px 8px;
   background: #2B2C36;
   padding: 10px;
   color: #FFF;
@@ -266,6 +269,7 @@ form {
   width: 100%;
 }
 /* END CARD SECTION */
+
 /* FOOTER SECTION */
 .footer {
   display: flex;
@@ -308,29 +312,11 @@ form {
 /* END FOOTER SECTION */
 
 /* MEDIA QUERIES */
-/* Tablet */
-@media (max-width: 768px) {
-  .footer {
-      height: 70px;
-      font-size: 12px;
-  }
-  .footer-content {
-      gap: 10px;
-      flex-direction: column-reverse;
-      justify-content: center;
-  }
-}
-/* Mobile */
-@media (max-width: 480px) {
-  .card {
-      width: 100%;
-  }
-}
 
-/* TABLET MENU */
+/*TABLET*/
 @media screen and (max-width: 968px) {
   #nav-container {
-      text-align: center;
+    text-align: center;
   }
   .nav-ul {
     /* top: 100%; */
@@ -347,42 +333,64 @@ form {
     max-height: 100vh;
     background: #202126;
     border-radius: 8px;
+    z-index: 99;
   }
   .hide-ul {
-      max-height: 0;
+    max-height: 0;
   }
   .nav-link {
-      padding: 1rem 0;
-      font-size: 1.3rem;
-      border-bottom: 1px solid #2E303E;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #2E303E;
   }
   .nav-ul li:last-child .nav-link {
     border-bottom: none;
   }
   #nav-menu-button {
-      display: block;
+    display: block;
   }
 }
-/* END TABLEt MENU */
+@media (max-width: 768px) {
+  .footer {
+    height: 70px;
+    font-size: 12px;
+  }
+  .footer-content {
+    gap: 10px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+/*END TABLET*/
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+/* END MOBILE */
 
 /* DESKTOP MENU */
 @media screen and (min-width: 701px) {
   .nav-link {
-      flex-basis: auto;
-      padding: 1rem 1.5rem;
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
   }
 }
 @media screen and (max-width: 1040px) {
   #nav-logo {
-      margin-left: 1rem;
+    margin-left: 1rem;
   }
 }
 /* END DESKTOP MENU */
 
 /* THREE JS SECTION */
-canvas {
-  position: fixed;
+#threejs-container {
+  position: fixed; /* Добавьте это, чтобы сцена была на фоне и не мешала другим элементам */
   top: 0;
   left: 0;
-  z-index: -99;
+  width: 100%;
+  height: 100%;
+  z-index: -99; /* Это убедится, что сцена находится позади других элементов на странице */
 }
